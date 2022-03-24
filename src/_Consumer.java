@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class _customer {
+public class _Consumer {
 
     public static void main(String[] args) {
         //Consumer<String> printConsumer = message -> System.out.println("Hello "+message);
