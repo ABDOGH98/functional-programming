@@ -8,6 +8,10 @@ public class _Consumer {
         //Consumer<String> printConsumer = message -> System.out.println("Hello "+message);
         //List<String> cities = Stream.of("Sydney", "Dhaka", "New York", "London");
         //cities.forEach(printConsumer);
+
+        Consumer<Integer> pritInt = integer -> System.out.println(integer);
+        pritInt.accept(15);
+
         Consumer<List<String>> upperCaseConsumer = list -> {
             for(int i=0; i< list.size(); i++){
                 list.set(i, list.get(i).toUpperCase());

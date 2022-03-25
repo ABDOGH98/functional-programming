@@ -20,5 +20,14 @@ public class App {
 
         consum1.andThen(consum2).accept(hello);
 
+        Supp<Integer> giveMeNumber = () -> 1 ;
+        giveMeNumber.get();
+
+        Predi<String> passwordCheck = pass -> pass.equals("myPass");
+        Predi<String> lengthPass = pass -> pass.length()>10 ;
+        System.out.println(passwordCheck.test("abdo"));
+        System.out.println(passwordCheck.test("myPass"));
+        System.out.println(passwordCheck.and(lengthPass).test("myPass"));
+
     }
 }

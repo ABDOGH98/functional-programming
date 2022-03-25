@@ -2,7 +2,6 @@
 public interface Consum<T> {
     void accept(T t);
     // upperCaseConsumer.andThen(printConsumer).accept(cities);
-
     /**
      *
      */
