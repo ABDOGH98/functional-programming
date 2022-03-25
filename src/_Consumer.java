@@ -15,6 +15,7 @@ public class _Consumer {
         };
         List<String> cities = Arrays.asList("Sydney", "Dhaka", "New York", "London");
         Consumer<List<String>> printConsumer = list -> list.stream().forEach(System.out::println);
+
         upperCaseConsumer.andThen(printConsumer).accept(cities);
     }
 }

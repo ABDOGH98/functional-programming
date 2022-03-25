@@ -11,10 +11,14 @@ public class App {
 
         Func<String,Integer> ss = String::length;
 
-        System.out.println(ss.apply("Hello ENSET"));
+        System.out.println(ss.apply("Hello ENSET from Say Function"));
 
-        List<? extends Number> foo1 = new ArrayList<Number>();
-        List<? super Number> foo2 = new ArrayList<Number>();
+        String hello = "Hello Abdo From Consum Like Consumer";
+
+        Consum<String> consum1 = t -> System.out.println(t);
+        Consum<String> consum2 = t -> System.out.println(t.length());
+
+        consum1.andThen(consum2).accept(hello);
 
     }
 }
